@@ -16,8 +16,12 @@ conda activate car
 #### Installing everything manually is not recommended.
 #### Then you have to download precompiled Udacity program from https://github.com/udacity/self-driving-car-sim
 #### To start with project:
-- start Udacity program in training mode, click Record and choose folder where you want to save data (recommend to make new folder in the same place where is training script). Click record once again and drive 3/4 rounds.
-- run training script:
+- start Udacity program in Training Mode, click Record and choose folder where you want to save data (recommend to make new folder in the same place where is training script). Click record once again and drive 3/4 rounds.
+- run training script, enter the name of folder with driving_log.csv file (you can choose training option i.e. used model):
 ```
-python 
-
+python train.py -d [diretory]
+```
+- choose Autonomous Mode, trained model and run driving script:
+```
+python auto.py model-00x.h5
+```
