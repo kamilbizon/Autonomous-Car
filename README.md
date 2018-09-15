@@ -29,6 +29,17 @@ python auto.py model-00x.h5
 ![My image](https://github.com/kamilbizon/Content/blob/master/drive.png)
 
 ## Training
+
+
+
 #### For training we split data for training and validation part. First we preprocess images and do augmentation to produce more data and prepare CNN for more possible situations:
 - reverse image and negate steering,
-- 
+- change brigtness,
+- add random shadow,
+- translate image and steering,
+- crop car and part of sky,
+- translate rgb to yuv.
+
+![My image](https://github.com/kamilbizon/Content/blob/master/shadow.png)
+![My image](https://github.com/kamilbizon/Content/blob/master/brightness1.png)
+![My image](https://github.com/kamilbizon/Content/blob/master/yuv.png)
