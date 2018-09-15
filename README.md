@@ -45,3 +45,7 @@ python auto.py model-00x.h5
 ![My image](https://github.com/kamilbizon/Content/blob/master/translate.png)
 ![My image](https://github.com/kamilbizon/Content/blob/master/yuv.png)
 
+#### Main model that we use is inpired by NVIDIA ones
+![My image](https://github.com/kamilbizon/Content/blob/master/NVIDIA_model.png)
+
+
