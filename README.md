@@ -42,4 +42,6 @@ python auto.py model-00x.h5
 
 ![My image](https://github.com/kamilbizon/Content/blob/master/shadow.png)
 ![My image](https://github.com/kamilbizon/Content/blob/master/brightness1.png)
+![My image](https://github.com/kamilbizon/Content/blob/master/translate.png)
 ![My image](https://github.com/kamilbizon/Content/blob/master/yuv.png)
+
