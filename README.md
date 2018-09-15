@@ -29,9 +29,6 @@ python auto.py model-00x.h5
 ![My image](https://github.com/kamilbizon/Content/blob/master/drive.png)
 
 ## Training
-
-
-
 #### For training we split data for training and validation part. First we preprocess images and do augmentation to produce more data and prepare CNN for more possible situations:
 - reverse image and negate steering,
 - change brigtness,
@@ -44,8 +41,6 @@ python auto.py model-00x.h5
 ![My image](https://github.com/kamilbizon/Content/blob/master/brightness1.png)
 ![My image](https://github.com/kamilbizon/Content/blob/master/translate.png)
 ![My image](https://github.com/kamilbizon/Content/blob/master/yuv.png)
-
-#### Main model that we use is inpired by NVIDIA ones
+## Model
+#### Main model that we use is inpired by NVIDIA's model from project "End to End Learning for Self-Driving Cars"
 ![My image](https://github.com/kamilbizon/Content/blob/master/NVIDIA_model.png)
-
-
