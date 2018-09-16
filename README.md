@@ -21,11 +21,14 @@ conda activate car
 ```
 python train.py -d [diretory]
 ```
-- choose Autonomous Mode, trained model and run driving script (you can try our model-003.h5, unfotunately it can't pass whole round):
+- choose Autonomous Mode, trained model and run driving script, (you can try our model-003.h5, unfotunately it can't pass whole round):
 ```
 python auto.py model-00x.h5
 ```
-
+- if you used model_1 for training use '-1 True' option:
+```
+python auto.py model-00x.h5 -1 True
+```
 ![My image](https://github.com/kamilbizon/Content/blob/master/drive.png)
 
 ## Training
