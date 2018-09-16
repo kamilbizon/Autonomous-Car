@@ -1,5 +1,5 @@
 from image_processing import INPUT_SHAPE, second_shape
-from image_processing import batch_NVIDIA_gen, batch_gen
+from image_processing import batch_NVIDIA_gen, batch_generator_model_1
 import argparse
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
@@ -70,11 +70,11 @@ class model_1(model):
         sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
         self.model.compile(loss='mean_squared_error', optimizer=sgd)
 
-        self.model.fit_generator(batch_gen(args.data_dir, x_train, y_train, args.batch_size, True),
+        self.model.fit_generator(batch_generator_model_1(args.data_dir, x_train, y_train, args.batch_size, True),
                                  args.samples,
                                  args.num_epochs,
                                  max_q_size = 1,
-                                 validation_data = batch_gen(args.data_dir, x_test, y_test, args.batch_size, False),
+                                 validation_data = batch_generator_model_1(args.data_dir, x_test, y_test, args.batch_size, False),
                                  nb_val_samples = len(x_test),
                                  callbacks = [self.checkpoint],
                                  verbose = 1)
@@ -181,9 +181,9 @@ def main():
         mod = NVIDIA_model()
         print('NVIDIA')
 
-
     mod.build(args)
     mod.train(args, *data)
+
 
 if __name__ == '__main__':
     main()

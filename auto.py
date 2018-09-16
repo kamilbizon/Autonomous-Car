@@ -32,7 +32,8 @@ def telemetry(sid, data):
 
         try:
             image = np.asarray(image)
-            image = ip.preprocessing_NVIDIA(ip.Image(image))
+            # image = ip.preprocessing_NVIDIA(ip.Image(image))
+            image = preprocess(ip.Image(image))
             image = np.array([image.img])
 
             steer = float(model.predict(image, batch_size=1))
@@ -71,9 +72,20 @@ def send_control(steering_angle, throttle):
 def main():
     parse = argparse.ArgumentParser(description='Autonomous driving')
     parse.add_argument('model', type=str, help='Path to .h5 model file.')
-    parse.add_argument('-2', help='choose second model', dest='model_2', type=bool, default=False)
+    parse.add_argument('-1', help='choose model_1 preprocessing', dest='model_1', type=bool, default=False)
 
     args = parse.parse_args()
+
+    global preprocess
+
+    if args.model_1:
+        print('Model_1 preprocessing')
+        preprocess = ip.preproc_model_1
+    else:
+        print('NVIDIA model preprocessing')
+        preprocess = ip.preprocessing_NVIDIA
+
+
     global model
     model = load_model(args.model)
     global app
