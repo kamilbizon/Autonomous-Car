@@ -2,7 +2,7 @@
 
 # Autonomous-Car
 #### The goal of our project was to learn how to use popular frameworks frequently used for research and other uses such as keras, numpy, OpenCV etc. The following script's goal is to clone behavior of a human driver for which we train a CNN model. For training and testing models we chose to use Udacity's Self Driving Car Simulator for the ease of use it provides and being faily lightweight. This allowed us to focus on other things in the project. That being said similar approach could be used both in real life or in video games such as GTA V.
-
+#### We want to say thanks for authors of ready-made projects which we base on, try to understand and build our version. Biggest thanks for authors of: github.com/naokishibuya/car-behavioral-cloning and chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9
 
 ## Getting started
 #### The simplest way to install all dependencies is to install 64bit Anaconda with Pyhthon 3.6 version. Then run Anaconda Prompt and install all dependencies with:  
